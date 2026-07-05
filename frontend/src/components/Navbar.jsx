@@ -9,11 +9,11 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [token, setToken] = useState(true)
   return (
-    <div className='flex items-center justify-between text-sm  py-4 mb-5 bg-white border-b' border-b-gray-400>
-      <img className='w-44 cursor-pointer' src={logoImg} alt= "Logo" />
-      <ul className='hidden md:flex items-center gap-5 font-medium '>
+    <div className='flex items-center justify-between text-sm  py-4 mb-5 bg-white border-b border-b-gray-400'>
+      <img onClick={() => navigate('/')} className='w-44 cursor-pointer' src={logoImg} alt= "Logo" />
+      <ul className=' md:flex items-center gap-5 font-medium '>
         <NavLink to='/'>
-          <li className='border-none outline-none bg-primary w-3/5 m-aut '>HOME</li>
+          <li className='border-none outline-none bg-primary w-3/5 m-auto '>HOME</li>
         </NavLink>
         <NavLink to='/doctors'>
           <li className='border-none outline-none bg-primary m-auto '>ALL DOCTORS</li>  
