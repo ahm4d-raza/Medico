@@ -144,7 +144,7 @@ const daysOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
           </div>
 
           {/* ----Listing Related Doctors */}
-          <RelatedDoctors docId={docid} speciality={docInfo?.speciality} />
+          <RelatedDoctors docId={docId} speciality={docInfo?.speciality} />
           </div>
   )
 }
