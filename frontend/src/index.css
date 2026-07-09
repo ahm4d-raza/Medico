@@ -5,8 +5,21 @@
   font-family: 'Outfit';
 }
 
-@media(max-width-740px){
-  .active p{
-    @apply text-white bg-blue-600
+/* Mobile Touch Target Fix */
+@media (hover: none) or (pointer: coarse) {
+  /* This targets the specific dropdown container inside your menu */
+  ul.flex-col a, 
+  ul.flex-col button,
+  .mobile-touch-item {
+    -webkit-tap-highlight-color: transparent; /* Removes default blue browser flash on mobile */
+    transition: background 0.1s ease, color 0.1s ease;
+  }
+
+  /* Force background changes directly on tap */
+  ul.flex-col a:active,
+  ul.flex-col button:active,
+  .mobile-touch-item:active {
+    background-color: #f3f4f6 !important; /* Tailwind's gray-100 color */
+    color: #2563eb !important; /* Tailwind's blue-600 color */
   }
 }
